@@ -11,7 +11,7 @@
     <div class="content-content">   
        <p class="names"><%= post.user.firstname %> <%= post.user.lastname %></p><br>
        <p class="content"><%= post.content %><br></p>
-        <%= image_tag post.image.url %><br><br>
+        <%= image_tag post.image.url,style:"width:500px" %><br><br>
         <%= link_to 'Show', post,class:'btn btn-warning' %>
         <%= link_to 'Edit', edit_post_path(post),class:'btn btn-success' %>
         <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?'},class:'btn btn-danger' %><br>
