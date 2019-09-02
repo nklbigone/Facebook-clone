@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-
+  
   def index
     @posts = Post.all
   end
@@ -49,13 +49,10 @@ class PostsController < ApplicationController
   end
 
   private
-  
-    def set_post
-      @post = Post.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def post_params
-      params.require(:post).permit(:content, :image, :user_id)
-    end
+  def set_post
+  @post = Post.find(params[:id])
+  end
+  def post_params
+  params.require(:post).permit(:content, :image, :user_id)
+  end
 end
