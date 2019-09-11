@@ -19,8 +19,8 @@
   <div class="field">
     <%= form.label :image %>
     <%= image_tag(@post.image.url) if @post.image && @post.image.url %>
-    <%= form.file_field :image %>
-    <%= form.hidden_field :image_cache %>
+    <%= form.file_field :image,style:"max-width:100%" %>
+    <%= form.hidden_field :image_cache,style:"max-width:100%" %>
   </div>
 
   <div class="actions">

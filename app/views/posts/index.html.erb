@@ -1,3 +1,4 @@
+
 <div id="main2">
   <div id="left">
     &nbsp
@@ -11,7 +12,7 @@
     <div class="content-content">   
       <p class="names"><%= post.user.firstname %> <%= post.user.lastname %></p><br>
       <p class="content"><%= post.content %><br></p>
-      <%= image_tag post.image.url,style:"width:500px" %><br><br>
+      <%= image_tag post.image.url,style:"max-width:400px" %><br><br>
       <%= link_to 'Show', post,class:'btn btn-warning' %>
       <%if post.user == current_user %>
         <%= link_to 'Edit', edit_post_path(post),class:'btn btn-success' %>
